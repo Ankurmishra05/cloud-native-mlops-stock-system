@@ -24,6 +24,7 @@ jobs:
 
     - name: Run Training Pipeline
       run: |
+        export MLFLOW_TRACKING_URI=file:./mlruns
         python src/training/train_model.py
 
     - name: Build Docker Image
